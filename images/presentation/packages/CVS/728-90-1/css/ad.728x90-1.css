@@ -1,0 +1,143 @@
+/*	Ad :: @Model
+* --------------------------------------------------------------------- */
+/* role : unifiy px / rem conversion */
+html {
+    font-size: 62.8%;
+}
+
+/* role : set the size of the placeholder */
+.ad {
+    width: 100%;
+    max-width: 728px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* role : allows the image to be responsive */
+.ad img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+}
+
+/* role : set the position of the swipe button */
+.ad__button {
+    position: absolute;
+    width: 33%;
+    top: auto;
+    bottom: 7%;
+    right: 0.15%;
+    margin: 0;
+    left: auto;
+}
+
+/* role : set the style of the trademark */
+.ad__tm {
+    text-align: center;
+    display: block;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1px;
+}
+
+.ad__tm em {
+    color: #004faf;
+    font-weight: bold;
+}
+
+/* role : when the screen is as long as the maximum width or less */
+@media all and ( max-width: 728px ) {
+    .ad__tm {
+        font-size: 1vw;
+    }
+
+    .ad__tm em {
+        font-size: 1.25em;
+    }
+}
+
+/* role : when the screen is longer than the minimum width */
+@media all and ( min-width: 729px ) {
+    .ad__tm {
+        font-size: 7px;
+    }
+
+    .ad__tm em {
+        font-size: 9px;
+    }
+}
+
+
+/*	Vendor :: Ad :: @Theme
+* --------------------------------------------------------------------- */
+.text__checkout {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+.swipe__term__text .color--primary {
+    color: white;
+}
+
+
+/*	Swipe :: @Modifier
+* --------------------------------------------------------------------- */
+/* role : when the screen is as long as the maximum width or less */
+@media all and ( max-width: 728px ) {
+    .swipe {
+        font-size: 2.75vw;
+    }
+
+    .swipe .swipe__init {
+        padding-left: 5.5vw;
+    }
+
+    .swipe .swipe__term {
+        padding-left: 3vw;
+    }
+
+    .swipe--in-motion .swipe__term {
+        padding-right: 5.5vw;
+    }
+
+    .swipe .swipe__init__text,
+    .swipe .swipe__term__text {
+        font-size: 2.5vw;
+    }
+
+    .swipe .swipe__term__text:before,
+    .swipe .swipe__term__text:after {
+        height: 2.5vw;
+    }
+}
+
+/* role : when the screen is longer than the minimum width */
+@media all and ( min-width: 729px ) {
+    .swipe {
+        font-size: 2rem;
+    }
+
+    .swipe .swipe__init {
+        padding-left: 4rem;
+    }
+
+    .swipe .swipe__term {
+        padding-left: 2rem;
+    }
+
+    .swipe--in-motion .swipe__term {
+        padding-right: 4rem;
+    }
+
+    .swipe .swipe__init__text, 
+    .swipe .swipe__term__text {
+        font-size: .9em;
+    }
+
+    .swipe .swipe__term__text:before,
+    .swipe .swipe__term__text:after {
+        height: auto;
+    }
+}
